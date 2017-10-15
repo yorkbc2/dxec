@@ -15,7 +15,7 @@ class CreateSecureKeysTable extends Migration
     {
         Schema::create('secure_keys', function (Blueprint $table) {
             $table->increments('id');
-            $table->string("sc_key");
+            $table->string("sc_key")->unique();
             $table->timestamps();
         });
     }
